@@ -26,7 +26,7 @@ const Auth = () => {
     }))
   }
 const sendRequest= async(type="login")=>{
- let res = axios.post(`http://localhost:8000/api/user/${type}`,{name:data.name,email:data.email,
+ let res = axios.post(`https://pococare-backend.vercel.app/api/user/${type}`,{name:data.name,email:data.email,
 password:data.password,role:data.role}).catch((err)=>console.log(err))
 let newdata = await res;
 return newdata.data;
